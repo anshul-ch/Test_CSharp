@@ -2,8 +2,8 @@
 
 namespace Test_Charp.MediSure_Clinic_Bill
 {
-    
 
+    #region ClassProperties
     public class PatientBill
     {
         /// <summary>
@@ -24,7 +24,7 @@ namespace Test_Charp.MediSure_Clinic_Bill
         public decimal DiscountAmount { get; set; }
         public decimal FinalPayable { get; set; }
     }
-
+    #endregion
     public static class BillState
     {
         /// <summary>
@@ -35,14 +35,13 @@ namespace Test_Charp.MediSure_Clinic_Bill
         public static bool HasLastBill = false;
     }
 
+    #region CreateNewBill
     public class BillIniciate
     {
         /// <summary>
         /// Creates bill for new Patients:
         /// <item>Captures and validates user input from the console.</item>
-        /// <item>Calculates Gross, Discount, and Final amounts.</item>
-        /// <item>Saves the resulting object to the global <see cref="BillState"/>.</item>
-        /// </list>
+        /// <item>Calculates Gross, Discount, and Final amounts.</itemm
         /// </summary>
 
 
@@ -140,8 +139,10 @@ namespace Test_Charp.MediSure_Clinic_Bill
             Console.WriteLine($"Final Payable: {newBill.FinalPayable:F2}");
         }
     }
+    #endregion
 
-    
+
+    #region ViewLastBill
     public class ViewBill
     {
         /// <summary>
@@ -170,8 +171,10 @@ namespace Test_Charp.MediSure_Clinic_Bill
             Console.WriteLine("---------------------------------");
         }
     }
+    #endregion
 
- 
+
+    #region ClearLastBill
     public class BillClean
     {
         /// <summary>
@@ -188,6 +191,7 @@ namespace Test_Charp.MediSure_Clinic_Bill
             Console.WriteLine("Last bill cleared.");
         }
     }
+    #endregion
 
 
     class Program

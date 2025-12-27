@@ -6,6 +6,8 @@ namespace Test_Charp.QuickMart_Profit_Calculator
     /// Represents a sales transaction, including details about the customer, item, amounts, 
     /// and profit or loss information.
     /// </summary>
+    /// 
+    #region ClassProperties
     public class SaleTransaction
     {
         /// <summary>
@@ -26,6 +28,7 @@ namespace Test_Charp.QuickMart_Profit_Calculator
         public decimal ProfitOrLossAmount { get; set; }
         public decimal ProfitMarginPercent { get; set; }
     }
+    #endregion
 
     public static class TransactionState
     {
@@ -36,6 +39,7 @@ namespace Test_Charp.QuickMart_Profit_Calculator
         public static bool HasLastTransaction = false;
     }
 
+    #region NewTransaction
     public class IniciateTransaction
     {
         /// <summary>
@@ -138,8 +142,10 @@ namespace Test_Charp.QuickMart_Profit_Calculator
             Console.WriteLine($"Profit Margin (%): {newTrans.ProfitMarginPercent:F2}");
         }
     }
+    #endregion
 
-    public class Transactionviewtransaction
+    #region ViewLastTransaction
+    public class ViewTransaction
     {
         /// <summary>
         /// Displays the details of the most recent sale transaction to the console.
@@ -170,7 +176,9 @@ namespace Test_Charp.QuickMart_Profit_Calculator
             Console.WriteLine("--------------------------------------------------------------------------------------------------");
         }
     }
+    #endregion
 
+    #region CalculateProfitLoss
     public class TransactionCalculator
     {
         /// <summary>
@@ -220,6 +228,7 @@ namespace Test_Charp.QuickMart_Profit_Calculator
             Console.WriteLine($"Profit Margin (%): {trans.ProfitMarginPercent:F2}");
         }
     }
+    #endregion
 
     class Program
     {
@@ -229,7 +238,7 @@ namespace Test_Charp.QuickMart_Profit_Calculator
         static void Main(string[] args)
         {
             IniciateTransaction newTransaction = new IniciateTransaction();
-            Transactionviewtransaction viewTransaction = new Transactionviewtransaction();
+            ViewTransaction viewTransaction = new ViewTransaction();
             TransactionCalculator calculateTransaction = new TransactionCalculator();
 
             bool exit = false;
