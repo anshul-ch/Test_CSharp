@@ -230,7 +230,7 @@ namespace Test_Charp.QuickMart_Profit_Calculator
     }
     #endregion
 
-    class Program
+    class Program1
     {
         /// <summary>
         /// Serves as the entry point for the QuickMart Traders application.
