@@ -74,9 +74,9 @@ namespace Test_Charp.QuickMart_Profit_Calculator
             while (true)
             {
                 Console.Write("Enter Quantity: ");
-                if (int.TryParse(Console.ReadLine(), out int qty) && qty > 0)
+                if (int.TryParse(Console.ReadLine(), out int quantity) && quantity > 0)
                 {
-                    newTrans.Quantity = qty;
+                    newTrans.Quantity = quantity;
                     break;
                 }
                 Console.WriteLine("Invalid input. Quantity must be greater than 0.");
